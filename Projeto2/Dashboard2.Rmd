@@ -1,0 +1,19 @@
+---
+title: "Isabela Escuder"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(DT)
+tabela <- readRDS(file = "base.RDS")
+```
+
+
+```{r}
+DT::datatable(tabela)
+
+```
